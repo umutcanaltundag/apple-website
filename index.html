@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body onload="baslat()">
+    <div class="circle"></div>
+    <nav>
+        <div class="dropdown">
+            <button><a href="#" class="home">Anasayfa</a></button>
+            <div class="projects">
+                <button>Servis <i class="fa-solid fa-down"></i></button>
+                <ul>
+                    <li><a href="#">Ekran değişim</a></li>
+                    <li><a href="#">Batarya değişim</a></li>
+                    <li><a href="#">Arka cam değişim</a></li>
+                    <li><a href="#">Kamera lens değişim</a></li>
+                    <li><a href="#">Ön kamera değişim</a></li>
+                    <li><a href="#">Hoparlör değişim</a></li>
+                </ul>
+            </div>
+            
+            <div class="products">
+                <button>Ürünler</button>
+                <ul>
+                    <li><a href="#">iPhone 14 Pro Max</a></li>
+                    <li><a href="#">iPhone 14 Pro</a></li>
+                    <li><a href="#">iPhone 14 Plus</a></li>
+                    <li><a href="#">iPhone 13 Pro Max</a></li>
+                    <li><a href="#">iPhone 12 Pro Max</a></li>
+                    <li><a href="#">iPhone Xs Max</a></li>
+                    <li><a href="#">iPhone 7 Plus</a></li>
+                </ul>
+            </div>
+            
+            <div class="products">
+                <button>İletişim</button>
+                <ul>
+                    <li><a href="#cloud">0554 554 54 54</a></li>
+                    <li><a href="#">umut@gmail.com</a></li>
+                    <li><a href="#">linkedin @umut00</a></li>
+                    <li><a href="#">twitter @elonumut</a></li>
+                </ul>
+            </div>
+            <div class="products">
+                <button>Hakkımızda</button>
+                <ul>
+                    <li><a href="#cloud">Steve Jobs, Steve Wozniak ve Ronald Wayne tarafından kurulmuş Amerika merkezli teknolojik ürün ve yazılım şirketidir.</a></li>
+                </ul>
+            </div>
+            <a href="#"><img src="/img/Apple-logo.png" class="logo"></a>
+        </div>
+        <!-- <div class="kayan-yazi">
+            <span>Umutcan Teknoloji <i class="fa-solid fa-mobile-screen-button" style="color: #cccc;"></i></span>
+        </div> -->
+        <!-- Işıklı yazı -->
+        <div class="isikli-yazi">
+            <span>U</span>
+            <span>m</span>
+            <span>u</span>
+            <span>t</span>
+            <span>c</span>
+            <span>a</span>
+            <span>n</span>
+            <span> </span>
+            <span>T</span>
+            <span>e</span>
+            <span>k</span>
+            <span>n</span>
+            <span>o</span>
+            <span>l</span>
+            <span>o</span>
+            <span>j</span>
+            <span>i</span>
+        </div>
+
+    </nav>
+    <div class="img">
+        <div class="iphone12">
+            <img src="img/iphone-12.png" onclick="imgSlider('/img/iphone-12.png'); changeCircleColor('#b6ade4')">
+            <img src="img/iPhone-13.png" onclick="imgSlider('/img/iPhone-13.png'); changeCircleColor('#feece8')">
+            <img src="img/iphone-14-pro-max.png" onclick="imgSlider('/img/iphone-14-pro-max.png'); changeCircleColor('#453d4d')">
+            <img src="img/iphone-13-2.png" onclick="imgSlider('/img/iphone-13-2.png'); changeCircleColor('#ff7f58')">
+        </div>
+    </div>
+
+    <script>
+        // Işıklı yazı js
+                function baslat() {
+            var yazilar = document.querySelectorAll('.isikli-yazi span');
+            for (var i = 0; i < yazilar.length; i++) {
+                yazilar[i].style.animationDelay = i * 0.2 + 's';
+            }
+        }
+    </script>
+
+    <script src="app.js"></script>
+</body>
+</html>
