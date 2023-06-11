@@ -1,0 +1,192 @@
+  @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-image: url(/img/apple.jpg);
+    font-family: 'Poppins', sans-serif;
+    background-size: cover;
+}
+
+a,
+button {
+    font-family: 'Poppins', sans-serif;
+}
+
+.dropdown {
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    transition: .3s;
+}
+
+.projects,
+.products {
+    position: relative;
+}
+
+.projects ul,
+.products ul {
+    position: absolute;
+    background: white;
+    margin-top: 10px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s ease ;
+    transform: translateY(-10px);
+    text-align: center;
+}
+
+.projects a,
+.products a {
+    text-decoration: none;
+    color: #000;
+}
+
+.projects li,
+.products li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects li:hover,
+.products li:hover {
+    background-color: rgba(53, 37, 42, 0.564);
+    color: #000;
+}
+
+.dropdown button,
+.home {
+    background: none;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.dropdown button:hover,
+.home:hover {
+    color: rgb(224, 224, 224);
+}
+
+.projects button:focus + ul,
+.products button:focus + ul{
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0px);
+    border-radius: 5px;
+}
+
+.img{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+    transition: .4s;
+}
+
+.iphone12 img,
+.iphone11 img{ 
+    height: 100px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.iphone12,img:hover,
+.iphone11 img:hover
+{
+    transform: translateY(-30px);
+}
+
+
+/* .kayan-yazi {
+    font-size: 22px;
+    font-weight: 700;
+    position: relative;
+    animation: kaydirma 6s linear infinite;
+    display: inline-block;
+    top: 100px;
+    color: #cccc;
+    text-shadow: 0 0 5px rgb(115, 148, 167);
+} */
+
+@keyframes kaydirma {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+.logo 
+{
+    position: relative;
+    top: 400px;
+    max-width: 200px;
+    left: 100px;
+    transition: .4s;
+}
+.circle 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    clip-path: circle(550px at right 800px);
+}
+
+.isikli-yazi {
+    display: inline-block;
+    top:270px;
+    left: 550px;
+    position: absolute;
+}
+.isikli-yazi span {
+    animation: yanipSonen 1s linear infinite;
+}
+
+.isikli-yazi{
+    font-size: 25px;
+    font-weight: 800;
+    font-family: 'Acme', sans-serif;
+}
+
+@keyframes yanipSonen {
+    0% {
+        color: rgb(255, 0, 0);
+        text-shadow: 0 0 5px rgb(255, 0, 0);
+    }
+    50% {
+        color: rgb(0, 255, 0);
+        text-shadow: 0 0 5px rgb(0, 255, 0);
+    }
+
+    100% {
+        color: rgb(0, 0, 255);
+        text-shadow: 0 0 5px rgb(0, 0, 255);
+    }
+}
